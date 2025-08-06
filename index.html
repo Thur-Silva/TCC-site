@@ -1,1 +1,50 @@
-// tela principal
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Presentation</title>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
+  </head>
+  <body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <!-- Half Circle Gradient Background -->
+    <section class="hero-section">
+      <div class="half-moon" id="half-moon"></div>
+      <div class="hero-text">
+        <h1>The all-in-one workspace you’ll love</h1>
+        <p>Think it. Plan it. Build it. Without switching apps.</p>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="card-container">
+      <div class="glass-card">
+        <h2>Projects</h2>
+        <p>Manage all your work in one place.</p>
+      </div>
+      <div class="glass-card">
+        <h2>Boards</h2>
+        <p>Organize ideas and workflows visually.</p>
+      </div>
+      <div class="glass-card">
+        <h2>Docs</h2>
+        <p>Keep documents clean, aligned and collaborative.</p>
+      </div>
+    </section>
+
+    <script src="script/scrollEffect.js"></script>
+    <script>
+      // Import header HTML dynamically
+      fetch("components/Header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
