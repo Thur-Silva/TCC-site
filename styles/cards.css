@@ -1,0 +1,32 @@
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 60px 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 16px;
+  width: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+}
+
+.glass-card h2 {
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.glass-card p {
+  color: #555;
+  margin-top: 10px;
+}

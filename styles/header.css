@@ -1,0 +1,28 @@
+.site-header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navigation a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.navigation a:hover {
+  color: #6a0dad;
+}
