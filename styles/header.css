@@ -1,28 +1,48 @@
 .site-header {
-  width: 100%;
-  padding: 20px 40px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  padding: 16px 32px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+
+  z-index: 999;
+  transition: all 0.4s ease;
 }
 
 .site-header .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #0f172a;
 }
 
 .navigation a {
   margin-left: 20px;
   text-decoration: none;
-  color: #333;
-  transition: 0.3s;
+  color: #1e293b;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .navigation a:hover {
-  color: #6a0dad;
+  color: #2563eb;
+}
+
+/* Esconde quando scrolla para baixo */
+.site-header.hide {
+  opacity: 0;
+  transform: translate(-50%, -60px) scale(0.96);
+  pointer-events: none;
 }
